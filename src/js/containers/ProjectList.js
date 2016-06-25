@@ -1,19 +1,19 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 import Project from '../components/Project'
 import { connect } from 'react-redux'
 
 export class ProjectList extends Component {
-  render() {
-    const { categoryId, projects } = this.props
+  render () {
+    const { projects } = this.props
 
     return (
-      <div className="container">
+      <div className='container'>
         {projects.map(this.renderProject)}
       </div>
     )
   }
 
-  renderProject(attr) {
+  renderProject (attr) {
     return (
       <Project key={attr.id} {...attr} />
     )
@@ -25,10 +25,10 @@ ProjectList.propTypes = {
   projects: PropTypes.array.isRequired
 }
 
-function mapStateToProps(state, ownProps) {
-  if(ownProps.categoryId >= 0) {
+function mapStateToProps (state, ownProps) {
+  if (ownProps.categoryId >= 0) {
     let projects = state.projects.filter(project => {
-      if(project.category === ownProps.categoryId) {
+      if (project.category === ownProps.categoryId) {
         return project
       }
     })

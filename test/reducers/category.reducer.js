@@ -5,7 +5,7 @@ import deepFreeze from 'deep-freeze'
 
 describe('categories reducer', () => {
   it('should add a new category to the state', () => {
-    const stateBefore = [];
+    const stateBefore = []
     const action = {
       type: types.ADD_CATEGORY,
       title: 'New category',
@@ -17,8 +17,8 @@ describe('categories reducer', () => {
       style: 'fifty'
     }]
 
-    deepFreeze(stateBefore);
-    deepFreeze(action);
+    deepFreeze(stateBefore)
+    deepFreeze(action)
 
     expect(
       categories(stateBefore, action)

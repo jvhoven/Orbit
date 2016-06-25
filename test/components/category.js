@@ -3,7 +3,7 @@ import React from 'react'
 import TestUtils from 'react-addons-test-utils'
 import Category from '../../app/components/Category'
 
-function setup() {
+function setup () {
   let props = {
     id: 0,
     title: 'A category title',

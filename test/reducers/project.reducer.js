@@ -5,7 +5,7 @@ import deepFreeze from 'deep-freeze'
 
 describe('projects reducer', () => {
   it('should add a new project to the state', () => {
-    const stateBefore = [];
+    const stateBefore = []
     const action = {
       type: types.ADD_PROJECT,
       category: 0,
@@ -19,8 +19,8 @@ describe('projects reducer', () => {
       image: 'image.jpg'
     }]
 
-    deepFreeze(stateBefore);
-    deepFreeze(action);
+    deepFreeze(stateBefore)
+    deepFreeze(action)
 
     expect(
       projects(stateBefore, action)

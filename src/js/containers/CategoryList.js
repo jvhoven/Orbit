@@ -1,9 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 import Category from '../components/Category'
 import { connect } from 'react-redux'
 
 export class CategoryList extends Component {
-  render() {
+  render () {
     const { categories } = this.props
     return (
       <div>
@@ -12,7 +12,7 @@ export class CategoryList extends Component {
     )
   }
 
-  renderCategory(attr) {
+  renderCategory (attr) {
     return (
       <Category key={attr.id} {...attr} />
     )
@@ -23,7 +23,7 @@ CategoryList.propTypes = {
   categories: PropTypes.array.isRequired
 }
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return { categories: state.categories }
 }
 

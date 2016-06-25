@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'
 import CategoryList from '../containers/CategoryList'
 
 export default class Main extends Component {
-  render() {
+  render () {
     return (
       <main>
         <CategoryList />

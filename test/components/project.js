@@ -3,7 +3,7 @@ import React from 'react'
 import TestUtils from 'react-addons-test-utils'
 import Project from '../../app/components/Project'
 
-function setup() {
+function setup () {
   let props = {
     id: 0,
     title: 'A project title',
