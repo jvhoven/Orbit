@@ -1,7 +1,7 @@
 
 import * as types from '../constants/ActionTypes'
 
-export function createCategory(title, style) {
+export function addCategory(title, style) {
     return { type: types.ADD_CATEGORY, title, style }
 }
 
@@ -17,7 +17,7 @@ export function renameCategory(id, title) {
     return { type: types.RENAME_CATEGORY, id, title }
 }
 
-export function createProject(title, category, image) {
+export function addProject(title, category, image) {
     return { type: types.ADD_PROJECT, title, category, image }
 }
 

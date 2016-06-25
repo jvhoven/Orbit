@@ -1,5 +1,5 @@
 import {
-  CREATE_CATEGORY, DELETE_CATEGORY, RENAME_CATEGORY, RESIZE_CATEGORY
+  ADD_CATEGORY, DELETE_CATEGORY, RENAME_CATEGORY, RESIZE_CATEGORY
 }
 from '../constants/ActionTypes'
 
@@ -11,7 +11,7 @@ const initialState = [{
 
 export default function categories(state = initialState, action) {
   switch (action.type) {
-    case CREATE_CATEGORY:
+    case ADD_CATEGORY:
       return [{
           id: state.reduce((maxId, category) => Math.max(category.id, maxId), -1) + 1,
           title: action.title,

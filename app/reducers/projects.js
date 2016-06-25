@@ -1,5 +1,5 @@
 import {
-  CREATE_PROJECT, DELETE_PROJECT, EDIT_PROJECT
+  ADD_CATEGORY, DELETE_PROJECT, EDIT_PROJECT
 }
 from '../constants/ActionTypes'
 
@@ -26,7 +26,7 @@ const initialState = [
 
 const project = (state, action) => {
   switch(action.type) {
-    case CREATE_PROJECT:
+    case ADD_CATEGORY:
       return {
         id: action.id,
         category: action.category,
@@ -38,7 +38,7 @@ const project = (state, action) => {
 
 export default function projects(state = initialState, action) {
   switch(action.type) {
-    case CREATE_PROJECT:
+    case ADD_CATEGORY:
       return [
         ...state,
         project(undefined, action)
