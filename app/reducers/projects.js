@@ -26,7 +26,7 @@ const initialState = [
 
 const project = (state, action) => {
   switch(action.type) {
-    case ADD_CATEGORY:
+    case ADD_PROJECT:
       return {
         id: action.id,
         category: action.category,
@@ -38,7 +38,7 @@ const project = (state, action) => {
 
 export default function projects(state = initialState, action) {
   switch(action.type) {
-    case ADD_CATEGORY:
+    case ADD_PROJECT:
       return [
         ...state,
         project(undefined, action)
