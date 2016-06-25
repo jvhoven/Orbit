@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Project from '../components/Project'
 import { connect } from 'react-redux'
 
-class ProjectList extends Component {
+export class ProjectList extends Component {
   render() {
     const { categoryId, projects } = this.props
 
@@ -26,9 +26,11 @@ ProjectList.propTypes = {
 }
 
 function mapStateToProps(state, ownProps) {
-  if(ownProps.categoryId) {
+  if(ownProps.categoryId >= 0) {
     let projects = state.projects.filter(project => {
-      return project.category === ownProps.id
+      if(project.category === ownProps.categoryId) {
+        return project
+      }
     })
 
     return { projects: projects }

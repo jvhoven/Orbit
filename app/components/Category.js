@@ -6,7 +6,6 @@ export default class Category extends Component {
   render() {
     const { id, style, title } = this.props
     let classes = classNames('category', style)
-
     return (
       <div className={classes}>
         <div className="title">

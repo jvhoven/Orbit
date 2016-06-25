@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Category from '../components/Category'
 import { connect } from 'react-redux'
 
-class CategoryList extends Component {
+export class CategoryList extends Component {
   render() {
     const { categories } = this.props
     return (

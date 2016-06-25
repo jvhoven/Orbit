@@ -7,6 +7,11 @@ const initialState = [{
   title: 'Cool projects',
   style: 'sixtysix',
   id: 0
+},
+{
+  title: 'Sorta cool projects',
+  style: 'thirtythree',
+  id: 1
 }]
 
 export default function categories(state = initialState, action) {

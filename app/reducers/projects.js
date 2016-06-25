@@ -21,6 +21,24 @@ const initialState = [
     category: 0,
     image: 'assets/img/project-3.png',
     title: 'Fitness App'
+  },
+  {
+    id: 3,
+    category: 1,
+    image: 'assets/img/project-4.png',
+    title: 'Test'
+  },
+  {
+    id: 4,
+    category: 1,
+    image: 'assets/img/project-5.png',
+    title: 'Another'
+  },
+  {
+    id: 5,
+    category: 1,
+    image: 'assets/img/project-6.png',
+    title: 'Another'
   }
 ]
 
