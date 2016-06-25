@@ -33,10 +33,10 @@ npm start
 npm test
 ```
 
-Also be sure to use the ``webpack.config.js`` in order to have the benefits of the redux devtools. You can do so by editing ``server.js``.
+Also be sure to use the ``webpack.config.dev.js`` in order to have the benefits of the redux devtools. You can do so by editing ``server.js``.
 
 ```sh
-var config = require('./webpack.config')
+var config = require('./config/webpack.config.dev')
 ```
 
 ## Meta
