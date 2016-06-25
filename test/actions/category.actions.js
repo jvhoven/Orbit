@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect'
-import * as actions from '../../app/actions'
-import * as types from '../../app/constants/ActionTypes'
+import * as actions from '../../src/js/actions'
+import * as types from '../../src/js/constants/ActionTypes'
 
 describe('category actions', () => {
   it('should create a dispatch to add a category', () => {

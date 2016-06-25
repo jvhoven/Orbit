@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect'
-import categories from '../../app/reducers/categories'
-import * as types from '../../app/constants/ActionTypes'
+import categories from '../../src/js/reducers/categories'
+import * as types from '../../src/js/constants/ActionTypes'
 import deepFreeze from 'deep-freeze'
 
 describe('categories reducer', () => {

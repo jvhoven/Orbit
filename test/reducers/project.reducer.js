@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect'
-import projects from '../../app/reducers/projects'
-import * as types from '../../app/constants/ActionTypes'
+import projects from '../../src/js/reducers/projects'
+import * as types from '../../src/js/constants/ActionTypes'
 import deepFreeze from 'deep-freeze'
 
 describe('projects reducer', () => {
