@@ -1,7 +1,7 @@
 # Orbit
 > A modern age project management application.
 
-[![Build Status](https://travis-ci.org/jvhoven/Orbit.svg?branch=master)](https://travis-ci.org/jvhoven/Orbit)
+[![Build Status](https://travis-ci.org/jvhoven/Orbit.svg?branch=master)](https://travis-ci.org/jvhoven/Orbit) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 A project management application mainly for the purpose of learning new technologies. This project serves as a purpose to learn React, Redux and all the jazz around them.
 
