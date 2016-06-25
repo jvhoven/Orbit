@@ -1,3 +1,4 @@
+/* eslint-env mocha */
 import expect from 'expect'
 import categories from '../../app/reducers/categories'
 import * as types from '../../app/constants/ActionTypes'

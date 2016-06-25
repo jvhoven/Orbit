@@ -1,3 +1,4 @@
+/* eslint-env mocha */
 import expect from 'expect'
 import projects from '../../app/reducers/projects'
 import * as types from '../../app/constants/ActionTypes'
