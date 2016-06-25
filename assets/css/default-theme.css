@@ -20,9 +20,9 @@ aside {
 }
 
 .user {
+    position: relative;
     background-color: #a48ad4;
     padding: 20px 15px 15px 20px;
-    margin-bottom: 20px;
     min-height: 65px;
 }
 
@@ -36,17 +36,21 @@ aside {
 
 .user .username,
 .user .location {
+  position: absolute;
     color: #FFF;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
-    position: relative;
-    top: 8px;
 }
 
 .user .location {
+    top: 55px;
     font-size: 14px;
     color: #d3c5e8;
+}
+
+.user .username {
+    top: 30px;
 }
 
 nav ul li {
@@ -102,7 +106,7 @@ nav ul li.active a {
 
 .top-left {
     float: left;
-    max-width: 70.7%;
+    width: 70.7%;
 }
 
 .top-right {
@@ -125,7 +129,7 @@ nav ul li.active a {
 
 .top-left .search {
     position: relative;
-    max-width: calc(100% - 100px);
+    width: calc(100% - 120px);
     float: left;
     display: block;
 }
@@ -135,9 +139,9 @@ nav ul li.active a {
     width: calc(100% - 80px);
     height: calc(100% - 20px);
     border: 0;
-    padding: 10px 10px 10px 70px;
-
+    padding: 10px 10px 10px 90px;
     color: #607D8B;
+    border-right: 1px solid #e3e3e3;
 }
 
 .top-left .search i {
@@ -148,14 +152,15 @@ nav ul li.active a {
     color: #607D8B;
 }
 
-.top-right .notifications,
-.top-right .actions {
-    float: left;
+.top-right .notifications {
     float: left;
 }
 
+.top-right .actions {
+    float: right;
+}
+
 .top-right .notifications {
-    border-right: 1px solid #e3e3e3;
     padding: 0 30px;
 }
 
@@ -164,6 +169,14 @@ nav ul li.active a {
     float: left;
     position: relative;
     height: 100px;
+}
+
+.top-right .action:first-child {
+    border-left: 1px solid #e3e3e3;
+}
+
+.top-right .action:last-child {
+    border-right: 0;
 }
 
 .top-right .notification i,
@@ -214,6 +227,7 @@ main {
 .category {
     float: left;
     margin-top: 10px;
+    margin-righg
 }
 
 .category.hundred {
@@ -233,7 +247,7 @@ main {
 }
 
 .category .title {
-    padding: 10px 5px;
+    padding: 10px 10px;
     font-size: 14px;
     margin-bottom: 5px;
 }
@@ -254,45 +268,53 @@ main {
     visibility: visible;
 }
 
-.category .contents div {
+.category .contents .container {
     padding: 0;
     margin: 0;
-    list-style: none;
 
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-
-    -webkit-flex-flow: row wrap;
-    justify-content: space-between;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .category.thirtythree .contents div > .project {
-    width: 160px;
+    width: 33%;
+    min-width: 160px;
     height: 160px;
 }
 
 .category.fifty .contents div > .project {
-    width: 240vh;
-    height: 240vh;
+    width: 33%;
+    min-width: 240px;
+    height: 240px;
 }
 
 .category.sixtysix .contents div > .project {
-    width: 330px;
+    width: 33%;
+    min-width: 330px;
     height: 330px;
 }
 
 .category.hundred .contents div > .project {
-    width: 505px;
+    width: 33%;
+    min-width: 505px;
     height: 505px;
 }
 
 .project {
-    margin-right: 10px;
-    margin-top: 10px;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+
     overflow: hidden;
+    padding: 10px;
 }
 
 .project img {

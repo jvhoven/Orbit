@@ -7,7 +7,7 @@ export class ProjectList extends Component {
     const { categoryId, projects } = this.props
 
     return (
-      <div>
+      <div className="container">
         {projects.map(this.renderProject)}
       </div>
     )
