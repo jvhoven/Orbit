@@ -33,10 +33,13 @@ npm start
 npm test
 ```
 
-Also be sure to use the ``webpack.config.dev.js`` in order to have the benefits of the redux devtools. You can do so by editing ``server.js``.
+Also be sure to use the ``PROCESS_ENV=development`` in order to have the benefits of the redux devtools. You can do so by editing the start script in ``package.json``.
 
 ```sh
-var config = require('./config/webpack.config.dev')
+"scripts": {
+  "start": "cross-env NODE_ENV=production node server.js",
+  ...
+}
 ```
 
 ## Meta
