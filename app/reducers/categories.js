@@ -26,7 +26,6 @@ export default function categories(state = initialState, action) {
       )
 
     case RENAME_CATEGORY:
-      console.log("RENAMED")
       return state.map(category =>
         category.id === action.id ?
         Object.assign({}, category, {
