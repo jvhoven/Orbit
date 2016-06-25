@@ -1,5 +1,5 @@
 import {
-  ADD_CATEGORY, DELETE_PROJECT, EDIT_PROJECT
+  ADD_PROJECT, DELETE_PROJECT, EDIT_PROJECT
 }
 from '../constants/ActionTypes'
 
@@ -24,30 +24,35 @@ const initialState = [
   }
 ]
 
-const project = (state, action) => {
-  switch(action.type) {
-    case ADD_PROJECT:
-      return {
-        id: action.id,
-        category: action.category,
-        image: action.image,
-        title: action.title
-      }
-  }
-}
-
 export default function projects(state = initialState, action) {
   switch(action.type) {
     case ADD_PROJECT:
-      return [
-        ...state,
-        project(undefined, action)
+      return [{
+          id: state.reduce((maxId, project) => Math.max(project.id, maxId), -1) + 1,
+          title: action.title,
+          category: action.category,
+          image: action.image
+        },
+        ...state
       ]
+
     case DELETE_PROJECT:
       return state.filter((project) => {
         if(action.id == project.id)
           return false
       });
+
+
+    case EDIT_PROJECT:
+      return state.map(project =>
+        project.id === action.id ?
+        Object.assign({}, project, {
+          title: action.title,
+          image: action.image,
+          category: action.category
+        }) :
+        project
+      )
     default:
       return state
    }
