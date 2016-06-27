@@ -37,7 +37,7 @@ export class Category extends Component {
     if (!this.state.active) {
       element = (
         <div className={classes}>
-          <div className='title' onClick={() => this.toggleActive()}>
+          <div className='title' onDoubleClick={() => this.toggleActive()}>
             <span>{title}</span>
             <a href='#'>
               <i className='fa fa-bars'></i>
