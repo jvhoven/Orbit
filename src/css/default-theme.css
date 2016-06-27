@@ -228,7 +228,6 @@ main {
 .category {
     float: left;
     margin-top: 10px;
-    margin-righg
 }
 
 .category.hundred {
@@ -405,22 +404,34 @@ main.small {
 
 /* Editable category */
 .category.active .title {
-  background-color: #29B6F6;
+  background-color: #fff;
   margin: 0 10px;
   padding: 5px;
 }
 
 .category.active input {
   width: 65%;
+  border: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 1px solid #e3e3e3;
+  padding: 8px;
 }
 
 .category.active select {
   width: 25%;
+  border: 0;
+  background: 0;
+  border: 1px solid #e3e3e3;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 7px;
 }
 
 .category.active select,
 .category.active input {
-  padding: 7px;
+  color: #424242;
+      font-family: 'Roboto', sans-serif;
 }
 
 /* Global */
