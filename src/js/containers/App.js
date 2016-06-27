@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from '../components/Menu'
 import Main from '../components/Main'
-import Top from '../components/Top'
+import Top from './Top'
 
 const App = () => (
     <div>

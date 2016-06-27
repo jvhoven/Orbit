@@ -307,6 +307,7 @@ main {
 }
 
 .project {
+    position: relative;
     -webkit-align-self: flex-start;
     align-self: flex-start;
 
@@ -316,6 +317,16 @@ main {
 
     overflow: hidden;
     padding: 10px;
+}
+
+.project span {
+    display: inline-block;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+
+    font-size: 17px;
+    color: #FFF;
 }
 
 .project img {
@@ -347,6 +358,49 @@ main {
     height: 30vw;
 
     background-color: #fff;
+}
+
+/* On menu collapse */
+/*aside,
+main,
+.top {
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}*/
+
+aside.small {
+  width: 100px;
+}
+
+aside.small .user .username,
+aside.small .user .location {
+  display: none;
+}
+
+aside.small nav li a span {
+  display: none;
+}
+
+aside.small nav li a {
+  text-align: center;
+}
+
+aside.small nav li i {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+main.small {
+  left: 120px;
+  width: calc(100% - 140px);
+}
+
+.top.small {
+  width: calc(100% - 100px);
+  padding-left: 100px;
 }
 
 /* Global */
