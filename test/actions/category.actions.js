@@ -12,8 +12,8 @@ describe('category actions', () => {
 
     const expectedAction = {
       type: types.ADD_CATEGORY,
-      title: category.title,
-      style: category.style
+      title: 'A new category',
+      style: 'sixtysix'
     }
 
     expect(actions.addCategory(category.title, category.style)).toEqual(expectedAction)
@@ -30,18 +30,20 @@ describe('category actions', () => {
     expect(actions.deleteCategory(id)).toEqual(expectedAction)
   })
 
-  it('should create a dispatch to rename a category', () => {
+  it('should create a dispatch to edit a category', () => {
     const editCat = {
       id: 0,
-      title: 'New title'
+      title: 'New title',
+      style: 'fifty'
     }
 
     const expectedAction = {
-      type: types.RENAME_CATEGORY,
-      id: editCat.id,
-      title: editCat.title
+      type: types.EDIT_CATEGORY,
+      id: 0,
+      title: 'New title',
+      style: 'fifty'
     }
 
-    expect(actions.renameCategory(editCat.id, editCat.title)).toEqual(expectedAction)
+    expect(actions.editCategory(editCat.id, editCat.title, editCat.style)).toEqual(expectedAction)
   })
 })

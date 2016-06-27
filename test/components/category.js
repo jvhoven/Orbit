@@ -2,7 +2,7 @@
 import expect from 'expect'
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import Category from '../../src/js/components/Category'
+import { Category } from '../../src/js/components/Category'
 
 function setup () {
   let props = {

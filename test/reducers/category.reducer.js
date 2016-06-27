@@ -75,21 +75,22 @@ describe('categories reducer', () => {
     ).toEqual(stateAfter)
   })
 
-  it('should rename a category in the existing state', () => {
+  it('should edit a category in the existing state', () => {
     const stateBefore = [{
       id: 0,
       title: 'Dumb category name',
       style: 'fifty'
     }]
     const action = {
-      type: types.RENAME_CATEGORY,
+      type: types.EDIT_CATEGORY,
       id: 0,
-      title: 'A cool category name'
+      title: 'A cool category name',
+      style: 'thirtythree'
     }
     const stateAfter = [{
       id: 0,
       title: 'A cool category name',
-      style: 'fifty'
+      style: 'thirtythree'
     }]
 
     deepFreeze(stateBefore)
