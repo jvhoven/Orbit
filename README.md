@@ -16,8 +16,8 @@ These are the features I'm currently looking to implement.
     * Edit a project
     * Being able to add projects to another category
 * Category
-    * Create a new category
-    * Rename a category
+    * ✔ Create a new category
+    * ✔ Rename a category
     * Delete a category
     * Rearrange categories
 

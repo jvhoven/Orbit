@@ -5,6 +5,8 @@ export default class TopAction extends Component {
     const { action, icon, type } = this.props
     let element
 
+    console.log(typeof action)
+
     if (type === 'notification') {
       const { count } = this.props
       element = (
