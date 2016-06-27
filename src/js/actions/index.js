@@ -9,12 +9,8 @@ export function deleteCategory (id) {
   return { type: types.DELETE_CATEGORY, id }
 }
 
-export function resizeCategory (id, direction) {
-  return { type: types.RESIZE_CATEGORY, id, direction }
-}
-
-export function renameCategory (id, title) {
-  return { type: types.RENAME_CATEGORY, id, title }
+export function editCategory (id, title, style) {
+  return { type: types.EDIT_CATEGORY, id, title, style }
 }
 
 export function addProject (title, category, image) {

@@ -1,5 +1,5 @@
 import {
-  ADD_CATEGORY, DELETE_CATEGORY, RENAME_CATEGORY
+  ADD_CATEGORY, DELETE_CATEGORY, EDIT_CATEGORY
 }
 from '../constants/ActionTypes'
 
@@ -30,9 +30,9 @@ export default function categories (state = initialState, action) {
         category.id !== action.id
       )
 
-    case RENAME_CATEGORY:
+    case EDIT_CATEGORY:
       return state.map(category =>
-        category.id === action.id ? Object.assign({}, category, { title: action.title })
+        category.id === action.id ? Object.assign({}, category, { title: action.title, style: action.style })
         : category
       )
 
