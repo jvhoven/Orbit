@@ -318,6 +318,10 @@ main {
     padding: 10px;
 }
 
+.project:hover {
+  cursor: pointer;
+}
+
 .project span {
     display: inline-block;
     position: absolute;
