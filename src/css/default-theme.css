@@ -434,6 +434,14 @@ main.small {
       font-family: 'Roboto', sans-serif;
 }
 
+/* Bootstrap test */
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  top: 0;
+}
 /* Global */
 input:focus,
 button:focus,

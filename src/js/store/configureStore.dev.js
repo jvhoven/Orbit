@@ -1,20 +1,12 @@
-import { createStore, compose } from 'redux'
-import { persistState } from 'redux-devtools'
+import { createStore, applyMiddleware } from 'redux'
+import { browserHistory } from 'react-router'
+import { routerMiddleware } from 'react-router-redux'
 import rootReducer from '../reducers'
-import DevTools from '../containers/DevTools'
 
-const enhancer = compose(
-  DevTools.instrument(),
-  persistState(getDebugSessionKey())
-)
-
-function getDebugSessionKey () {
-  const matches = window.location.href.match(/[?&]debug_session=([^&]+)\b/)
-  return (matches && matches.length > 0) ? matches[1] : null
-}
+const middleware = routerMiddleware(browserHistory)
 
 export default function configureStore (initialState) {
-  const store = createStore(rootReducer, initialState, enhancer)
+  const store = createStore(rootReducer, initialState, applyMiddleware(middleware))
 
   if (module.hot) {
     module.hot.accept('../reducers', () =>

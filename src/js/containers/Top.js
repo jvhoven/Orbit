@@ -3,6 +3,7 @@ import TopAction from '../components/TopAction'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { addCategory } from '../actions'
+import { push } from 'react-router-redux'
 
 export class Top extends Component {
   dummyAction () {
@@ -12,6 +13,11 @@ export class Top extends Component {
   addCategory () {
     const { addCategory } = this.props
     addCategory('New category', 'thirtythree')
+  }
+
+  addProject () {
+    const { push } = this.props
+    push('/project')
   }
 
   closeMenu () {
@@ -49,7 +55,7 @@ export class Top extends Component {
             <TopAction action={() => this.dummyAction()} icon='fa fa-calendar' type='notification' count={7} />
           </div>
           <div className='actions'>
-            <TopAction action={() => this.dummyAction()} icon='fa fa-plus' type='action' />
+            <TopAction action={() => this.addProject()} icon='fa fa-plus' type='action' />
             <TopAction action={() => this.addCategory()} icon='fa fa-plus-square-o' type='action' />
             <TopAction action={() => this.dummyAction()} icon='fa fa-download' type='action' />
           </div>
@@ -60,11 +66,12 @@ export class Top extends Component {
 }
 
 Top.propTypes = {
-  addCategory: PropTypes.func.isRequired
+  addCategory: PropTypes.func.isRequired,
+  push: PropTypes.func.isRequired
 }
 
 function mapDispatchToProps (dispatch) {
-  return bindActionCreators({ addCategory }, dispatch)
+  return bindActionCreators({ addCategory, push }, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(Top)
