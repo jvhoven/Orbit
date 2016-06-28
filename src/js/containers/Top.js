@@ -17,7 +17,7 @@ export class Top extends Component {
 
   addProject () {
     const { push } = this.props
-    push('/project')
+    push('project')
   }
 
   closeMenu () {
