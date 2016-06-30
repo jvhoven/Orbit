@@ -2,7 +2,7 @@
 import expect from 'expect'
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import Project from '../../src/js/components/Project'
+import { Project } from '../../src/js/components/Project'
 
 function setup () {
   let props = {
