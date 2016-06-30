@@ -36,4 +36,8 @@ function mapDispatchToProps (dispatch) {
   return bindActionCreators({ push }, dispatch)
 }
 
+Project.propTypes = {
+  push: PropTypes.func.isRequired
+}
+
 export default connect(null, mapDispatchToProps)(Project)
