@@ -12,7 +12,7 @@ export default class CategoryEditable extends Component {
   }
 
   submit (e) {
-    if (e.which === 13) {
+    if (e.which === 13 || e.which === 27) {
       const { onSave } = this.props
       onSave(this.state.title, this.state.style)
     }

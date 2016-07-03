@@ -9,7 +9,7 @@ export class Project extends Component {
   */
   gotoProject (e, id) {
     const { push } = this.props
-    push('/project')
+    push('/project/' + id)
   }
 
   render () {

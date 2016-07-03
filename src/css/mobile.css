@@ -1,0 +1,20 @@
+/* Mobile landscape */
+@media only screen and (max-device-width : 760px) {
+	.top-right {
+		display: none;
+	}
+}
+
+/* Mobile portrait */
+@media only screen and (max-device-width : 414px) {
+	.top-right {
+		display: none;
+	}
+}
+
+/* Tablet portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.top-right {
+		display: none;
+	}
+}

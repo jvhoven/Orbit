@@ -6,11 +6,12 @@ class Menu extends Component {
   render () {
     const { pathname } = window.location
     const active = (url) => url === pathname ? 'active' : ''
+    const activeMatch = (reg) => pathname.match(reg) ? 'active' : ''
 
     return (
       <aside>
         <div className='user'>
-          <img src='public/img/github-prof.jpg' className='img round' alt=''/>
+          <img src='/public/img/github-prof.jpg' className='img round' alt=''/>
           <div className='user-attr'>
             <span className='location'>The Netherlands</span>
             <span className='username'>jvhoven</span>
@@ -24,10 +25,9 @@ class Menu extends Component {
                 Dashboard
               </Link>
             </li>
-            <li className={active('/project')}>
+            <li className={active('/project') || activeMatch('/project/[0-9]')}>
               <Link to='/project'>
-                <i className='fa fa-list'></i>
-                Project
+                <i className='fa fa-list'></i>Project
               </Link>
             </li>
           </ul>
